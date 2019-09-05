@@ -1,3 +1,9 @@
+"""
+Caches the hash of a subclass.
+This allows for the efficient use of dicts in cases when subclasses are rarely mutated.
+"""
+
+
 class CachedHash(object):
 
     def _subclass(self):
