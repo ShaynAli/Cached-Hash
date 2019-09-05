@@ -5,7 +5,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='cached-hash',
-    version='0.1',
+    version='0.2',
     url='https://github.com/ShaynAli/Cached-Hash',
     author='Shayaan Syed Ali',
     author_email='shayaan.syed.ali@gmail.com',
