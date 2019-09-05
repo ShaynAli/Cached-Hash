@@ -14,85 +14,6 @@ from abc import ABCMeta
 
 class CachedHash:
 
-    safe_names = {
-        # Class specific
-        '__hash',
-        # The rest are from https://docs.python.org/3/reference/datamodel.html
-        # region User-defined functions
-        '__doc__',
-        '__name__',
-        # endregion
-        # region 3.3.1. Basic customization
-        '__repr__',
-        '__str__',
-        '__bytes__',
-        '__format__',
-        '__lt__',
-        '__le__',
-        '__eq__',
-        '__ne__',
-        '__gt__',
-        '__ge__',
-        '__hash__',
-        '__bool__',
-        # endregion
-        # region 3.3.2. Customizing attribute access
-        '__getattr__',
-        '__getattribute__',
-        '__dir__',
-        # endregion
-        # region 3.3.7. Emulating container types
-        '__len__',
-        '__length_hint__',
-        '__getitem__',
-        '__iter__',
-        '__reversed__',
-        '__contains__',
-        # endregion
-        # region 3.3.8. Emulating numeric types
-        '__add__',
-        '__sub__',
-        '__mul__',
-        '__matmul__',
-        '__truediv__',
-        '__floordiv__',
-        '__mod__',
-        '__divmod__',
-        '__pow__',
-        '__lshift__',
-        '__rshift__',
-        '__and__',
-        '__xor__',
-        '__or__',
-        '__radd__',
-        '__rsub__',
-        '__rmul__',
-        '__rmatmul__',
-        '__rtruediv__',
-        '__rfloordiv__',
-        '__rmod__',
-        '__rdivmod__',
-        '__rpow__',
-        '__rlshift__',
-        '__rrshift__',
-        '__rand__',
-        '__rxor__',
-        '__ror__',
-        '__neg__',
-        '__pos__',
-        '__abs__',
-        '__invert__',
-        '__complex__',
-        '__int__',
-        '__float__',
-        '__index__',
-        '__round__',
-        '__trunc__',
-        '__floor__',
-        '__ceil__'
-        # endregion
-    }
-
     hash_mutators = {}
 
     @staticmethod
@@ -129,10 +50,6 @@ class CachedHash:
 
 
 class Example(CachedHash):
-
-    # safe_names = CachedHash.safe_names.union({
-    #     'safe_method'
-    # })
 
     def __init__(self, a=None, b=10, c='default'):
         super().__init__(verbose=True)
